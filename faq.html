@@ -8,260 +8,394 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        .faq-answer ul { list-style: none; padding: 0; margin: 0; }
-        .faq-answer li {
-            padding: 0.5rem 0; color: #cccccc; border-bottom: 1px solid #404040;
-            position: relative; padding-left: 1.5rem;
-        }
-        .faq-answer li:before {
-            content: "•"; color: var(--primary-color); font-weight: bold;
-            position: absolute; left: 0;
-        }
-        .faq-answer li:last-child { border-bottom: none; }
-        
-        /* FAQ Styles - Simple display without accordion */
-        .faq-question {
-            padding: 1rem;
-            background: #2a2a2a;
-            border: 1px solid #404040;
-            border-radius: 8px;
-            margin-bottom: 0.5rem;
-        }
-        
-        .faq-question h3 {
-            margin: 0;
-            font-size: 1.1rem;
-            color: var(--text-primary);
-        }
-        
-        .faq-answer {
-            padding: 1rem;
+        .faq-page {
             background: #1a1a1a;
-            border: 1px solid #404040;
-            border-top: none;
-            border-radius: 0 0 8px 8px;
+            min-height: 100vh;
+        }
+        
+        .faq-header {
+            background: #2a2a2a;
+            padding: 4rem 0;
+            text-align: center;
+            border-bottom: 1px solid #404040;
+        }
+        
+        .faq-header h1 {
+            color: #ffffff;
+            font-size: 2.5rem;
             margin-bottom: 1rem;
+        }
+        
+        .faq-header p {
+            color: #cccccc;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .faq-content {
+            padding: 4rem 0;
         }
         
         .faq-item {
+            background: #2a2a2a;
+            border: 1px solid #404040;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            background: #333333;
+            padding: 2rem;
+            border-bottom: 1px solid #404040;
+        }
+        
+        .faq-question h3 {
+            color: #ffffff;
+            font-size: 1.3rem;
+            margin: 0;
+            font-weight: 600;
+        }
+        
+        .faq-answer {
+            padding: 2rem;
+            background: #2a2a2a;
+        }
+        
+        .faq-answer ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .faq-answer li {
+            color: #cccccc;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #404040;
+            position: relative;
+            padding-left: 2rem;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        
+        .faq-answer li:before {
+            content: "•";
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 1.2rem;
+            position: absolute;
+            left: 0;
+            top: 0.75rem;
+        }
+        
+        .faq-answer li:last-child {
+            border-bottom: none;
+        }
+        
+        .faq-contact {
+            background: #2a2a2a;
+            border: 1px solid #404040;
+            border-radius: 12px;
+            padding: 3rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+        
+        .faq-contact h3 {
+            color: #ffffff;
+            font-size: 1.8rem;
             margin-bottom: 1rem;
+        }
+        
+        .faq-contact p {
+            color: #cccccc;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .faq-contact-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .faq-contact-buttons .btn {
+            min-width: 150px;
         }
     </style>
 </head>
 <body>
-    <header class="header">
-        <nav class="navbar">
-            <div class="nav-container">
-                <div class="nav-logo">
-                    <a href="./index.html">
-                        <!-- Option 1: Use Font Awesome icon (current) -->
-                        <i class="fas fa-home"></i>
-                        <!-- Option 2: Use custom logo image -->
-                        <!-- <img src="./images/logo.png" alt="TokyoRent Logo" style="height: 32px; margin-right: 0.75rem;"> -->
-                        <span>TokyoRent</span>
-                    </a>
-                </div>
-                <ul class="nav-menu">
-                    <li class="nav-item">
-                        <a href="./index.html" class="nav-link">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="./flats.html" class="nav-link">Our Flats</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="./apply.html" class="nav-link">Apply</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="./faq.html" class="nav-link active">FAQ</a>
-                    </li>
-                </ul>
-                <div class="hamburger">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <main class="main-content">
-
-<section class="faq-hero">
-    <div class="container">
-        <h1 class="page-title">Frequently Asked Questions</h1>
-        <p class="page-subtitle">Find answers to common questions about renting flats in Tokyo</p>
-    </div>
-</section>
-
-<section class="faq-section">
-    <div class="container">
-        <div class="faq-container">
-            <!-- FAQ Item 1 -->
-            <div class="faq-item">
-                <div class="faq-question">
-                    <h3>What documents do I need to rent an flat?</h3>
-                </div>
-                <div class="faq-answer">
-                    <ul>
-                        <li>Valid passport and visa (if applicable)</li>
-                        <li>Proof of income or financial support</li>
-                        <li>Japanese guarantor or guarantor company</li>
+    <div class="faq-page">
+        <!-- Header -->
+        <header class="header">
+            <nav class="navbar">
+                <div class="nav-container">
+                    <div class="nav-logo">
+                        <a href="./index.html">
+                            <i class="fas fa-home"></i>
+                            <span>TokyoRent</span>
+                        </a>
+                    </div>
+                    <ul class="nav-menu">
+                        <li class="nav-item">
+                            <a href="./index.html" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./flats.html" class="nav-link">Our Flats</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./apply.html" class="nav-link">Apply</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./faq.html" class="nav-link active">FAQ</a>
+                        </li>
                     </ul>
-                </div>
-            </div>
-            
-            <!-- FAQ Item 2 -->
-            <div class="faq-item">
-                <div class="faq-question">
-                    <h3>How long can I rent for?</h3>
-                </div>
-                <div class="faq-answer">
-                    <ul>
-                        <li>Short-term: 1-6 months</li>
-                        <li>Long-term: 6+ months</li>
-                        <li>Maximum: 2 years</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <!-- FAQ Item 3 -->
-            <div class="faq-item">
-                <div class="faq-question">
-                    <h3>Do you provide furnished flats?</h3>
-                </div>
-                <div class="faq-answer">
-                    <ul>
-                        <li>Fully furnished with furniture</li>
-                        <li>Kitchen appliances included</li>
-                        <li>Internet connection provided</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <!-- FAQ Item 4 -->
-            <div class="faq-item">
-                <div class="faq-question">
-                    <h3>What's included in the rent?</h3>
-                </div>
-                <div class="faq-answer">
-                    <ul>
-                        <li>Basic utilities (water, gas, electricity)</li>
-                        <li>Internet connection</li>
-                        <li>Cleaning services available (extra fee)</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <!-- FAQ Item 5 -->
-            <div class="faq-item">
-                <div class="faq-question">
-                    <h3>Can I rent without speaking Japanese?</h3>
-                </div>
-                <div class="faq-answer">
-                    <ul>
-                        <li>English-speaking staff</li>
-                        <li>All documents in English</li>
-                        <li>24/7 English support available</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <!-- FAQ Item 6 -->
-            <div class="faq-item">
-                <div class="faq-question">
-                    <h3>What areas do you cover?</h3>
-                </div>
-                <div class="faq-answer">
-                    <ul>
-                        <li>Central Tokyo (Shibuya, Shinjuku, Roppongi)</li>
-                        <li>Popular expat areas</li>
-                        <li>Near major train stations</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <!-- FAQ Item 7 -->
-            <div class="faq-item">
-                <div class="faq-question">
-                    <h3>How do I apply for a flat?</h3>
-                </div>
-                <div class="faq-answer">
-                    <ul>
-                        <li>Fill out online application form</li>
-                        <li>Submit required documents</li>
-                        <li>We'll contact you within 24 hours</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <!-- FAQ Item 8 -->
-            <div class="faq-item">
-                <div class="faq-question">
-                    <h3>Is there a security deposit?</h3>
-                </div>
-                <div class="faq-answer">
-                    <ul>
-                        <li>Amount: 1-2 months rent</li>
-                        <li>Fully refundable</li>
-                        <li>Returned if flat is in good condition</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        
-        <div class="faq-contact">
-            <h3>Still have questions?</h3>
-            <p>If you couldn't find the answer you're looking for, don't hesitate to contact us directly.</p>
-            <div class="faq-contact-buttons">
-                <a href="./index.html" class="btn btn-primary">Contact Us</a>
-                <a href="./apply.html" class="btn btn-secondary">Apply Now</a>
-            </div>
-        </div>
-    </div>
-</section>
-
-    </main>
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-container">
-                <div class="footer-section">
-                    <h3>TokyoRent</h3>
-                    <p>Your trusted partner for affordable and reliable housing in Tokyo.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <div class="hamburger">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
                     </div>
                 </div>
-                <div class="footer-section">
-                    <h4>Contact Info</h4>
-                    <p><i class="fas fa-map-marker-alt"></i> 1-1-1 Shibuya, Tokyo, Japan</p>
-                    <p><i class="fas fa-phone"></i> +81-3-1234-5678</p>
-                    <p><i class="fas fa-envelope"></i> info@tokyorent.com</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="./index.html">Home</a></li>
-                        <li><a href="./flats.html">Our Flats</a></li>
-                        <li><a href="./apply.html">Apply Now</a></li>
-                        <li><a href="./faq.html">FAQ</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Office Hours</h4>
-                    <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
-                    <p>Saturday: 10:00 AM - 4:00 PM</p>
-                    <p>Sunday: Closed</p>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
+            </nav>
+        </header>
+
+        <!-- FAQ Header -->
+        <section class="faq-header">
             <div class="container">
-                <p>&copy; 2024 TokyoRent. All rights reserved.</p>
+                <h1>Frequently Asked Questions</h1>
+                <p>Find answers to common questions about renting flats in Tokyo. Everything you need to know about our services, application process, and rental policies.</p>
             </div>
-        </div>
-    </footer>
-    <script src="./js/main.js"></script>
+        </section>
+
+        <!-- FAQ Content -->
+        <section class="faq-content">
+            <div class="container">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What documents do I need to rent a flat?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <ul>
+                            <li>Valid passport and visa (if applicable)</li>
+                            <li>Proof of income or financial support</li>
+                            <li>Japanese guarantor or guarantor company</li>
+                            <li>Employment certificate or student ID</li>
+                            <li>Previous rental history (if available)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How long can I rent for?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <ul>
+                            <li>Short-term rentals: 1-6 months</li>
+                            <li>Long-term rentals: 6+ months</li>
+                            <li>Maximum rental period: 2 years</li>
+                            <li>Flexible renewal options available</li>
+                            <li>Early termination possible with notice</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Do you provide furnished flats?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <ul>
+                            <li>All flats come fully furnished</li>
+                            <li>Complete kitchen appliances included</li>
+                            <li>High-speed internet connection provided</li>
+                            <li>Bedding and towels available</li>
+                            <li>Cleaning supplies provided</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What's included in the rent?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <ul>
+                            <li>Basic utilities (water, gas, electricity)</li>
+                            <li>High-speed internet connection</li>
+                            <li>Building maintenance and security</li>
+                            <li>Cleaning services (weekly)</li>
+                            <li>24/7 emergency support</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can I rent without speaking Japanese?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <ul>
+                            <li>English-speaking staff available</li>
+                            <li>All documents provided in English</li>
+                            <li>Multilingual support team</li>
+                            <li>Translation services included</li>
+                            <li>Cultural orientation provided</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 6 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What areas do you cover?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <ul>
+                            <li>Central Tokyo (Shibuya, Shinjuku, Roppongi)</li>
+                            <li>Popular expat neighborhoods</li>
+                            <li>Areas near major train stations</li>
+                            <li>University districts</li>
+                            <li>Business and entertainment districts</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 7 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How do I apply for a flat?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <ul>
+                            <li>Fill out our online application form</li>
+                            <li>Submit required documents</li>
+                            <li>Schedule a viewing (optional)</li>
+                            <li>We'll contact you within 24 hours</li>
+                            <li>Sign lease agreement and pay deposit</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 8 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Is there a security deposit?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <ul>
+                            <li>Security deposit: 1-2 months rent</li>
+                            <li>Fully refundable upon move-out</li>
+                            <li>Returned if flat is in good condition</li>
+                            <li>Deductions only for actual damages</li>
+                            <li>Detailed inspection report provided</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 9 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What are the payment methods?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <ul>
+                            <li>Bank transfer (preferred)</li>
+                            <li>Credit card payments accepted</li>
+                            <li>International wire transfers</li>
+                            <li>Monthly automatic payments available</li>
+                            <li>Multiple currency options</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 10 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What if I have problems with my flat?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <ul>
+                            <li>24/7 emergency hotline available</li>
+                            <li>Maintenance team on standby</li>
+                            <li>Online support ticket system</li>
+                            <li>Regular property inspections</li>
+                            <li>Quick response guarantee</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Contact Section -->
+                <div class="faq-contact">
+                    <h3>Still have questions?</h3>
+                    <p>If you couldn't find the answer you're looking for, don't hesitate to contact us directly. Our team is here to help you with any questions or concerns.</p>
+                    <div class="faq-contact-buttons">
+                        <a href="./index.html" class="btn btn-primary">
+                            <i class="fas fa-envelope me-2"></i>
+                            Contact Us
+                        </a>
+                        <a href="./apply.html" class="btn btn-secondary">
+                            <i class="fas fa-edit me-2"></i>
+                            Apply Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-container">
+                    <div class="footer-section">
+                        <h3>TokyoRent</h3>
+                        <p>Your trusted partner for affordable and reliable housing in Tokyo.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Contact Info</h4>
+                        <p><i class="fas fa-map-marker-alt"></i> 1-1-1 Shibuya, Tokyo, Japan</p>
+                        <p><i class="fas fa-phone"></i> +81-3-1234-5678</p>
+                        <p><i class="fas fa-envelope"></i> info@tokyorent.com</p>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="./index.html">Home</a></li>
+                            <li><a href="./flats.html">Our Flats</a></li>
+                            <li><a href="./apply.html">Apply Now</a></li>
+                            <li><a href="./faq.html">FAQ</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Office Hours</h4>
+                        <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                        <p>Saturday: 10:00 AM - 4:00 PM</p>
+                        <p>Sunday: Closed</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="container">
+                    <p>&copy; 2024 TokyoRent. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
