@@ -8,30 +8,43 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        .faq-answer ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        
+        .faq-answer ul { list-style: none; padding: 0; margin: 0; }
         .faq-answer li {
-            padding: 0.5rem 0;
-            color: #cccccc;
-            border-bottom: 1px solid #404040;
-            position: relative;
-            padding-left: 1.5rem;
+            padding: 0.5rem 0; color: #cccccc; border-bottom: 1px solid #404040;
+            position: relative; padding-left: 1.5rem;
         }
-        
         .faq-answer li:before {
-            content: "•";
-            color: var(--primary-color);
-            font-weight: bold;
-            position: absolute;
-            left: 0;
+            content: "•"; color: var(--primary-color); font-weight: bold;
+            position: absolute; left: 0;
+        }
+        .faq-answer li:last-child { border-bottom: none; }
+        
+        /* FAQ Styles - Simple display without accordion */
+        .faq-question {
+            padding: 1rem;
+            background: #2a2a2a;
+            border: 1px solid #404040;
+            border-radius: 8px;
+            margin-bottom: 0.5rem;
         }
         
-        .faq-answer li:last-child {
-            border-bottom: none;
+        .faq-question h3 {
+            margin: 0;
+            font-size: 1.1rem;
+            color: var(--text-primary);
+        }
+        
+        .faq-answer {
+            padding: 1rem;
+            background: #1a1a1a;
+            border: 1px solid #404040;
+            border-top: none;
+            border-radius: 0 0 8px 8px;
+            margin-bottom: 1rem;
+        }
+        
+        .faq-item {
+            margin-bottom: 1rem;
         }
     </style>
 </head>
@@ -41,7 +54,10 @@
             <div class="nav-container">
                 <div class="nav-logo">
                     <a href="./index.html">
+                        <!-- Option 1: Use Font Awesome icon (current) -->
                         <i class="fas fa-home"></i>
+                        <!-- Option 2: Use custom logo image -->
+                        <!-- <img src="./images/logo.png" alt="TokyoRent Logo" style="height: 32px; margin-right: 0.75rem;"> -->
                         <span>TokyoRent</span>
                     </a>
                 </div>
@@ -81,11 +97,10 @@
         <div class="faq-container">
             <!-- FAQ Item 1 -->
             <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(0)">
+                <div class="faq-question">
                     <h3>What documents do I need to rent an flat?</h3>
-                    <i class="fas fa-chevron-down faq-icon"></i>
                 </div>
-                <div class="faq-answer" id="faq-answer-0">
+                <div class="faq-answer">
                     <ul>
                         <li>Valid passport and visa (if applicable)</li>
                         <li>Proof of income or financial support</li>
@@ -96,11 +111,10 @@
             
             <!-- FAQ Item 2 -->
             <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(1)">
+                <div class="faq-question">
                     <h3>How long can I rent for?</h3>
-                    <i class="fas fa-chevron-down faq-icon"></i>
                 </div>
-                <div class="faq-answer" id="faq-answer-1">
+                <div class="faq-answer">
                     <ul>
                         <li>Short-term: 1-6 months</li>
                         <li>Long-term: 6+ months</li>
@@ -111,11 +125,10 @@
             
             <!-- FAQ Item 3 -->
             <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(2)">
+                <div class="faq-question">
                     <h3>Do you provide furnished flats?</h3>
-                    <i class="fas fa-chevron-down faq-icon"></i>
                 </div>
-                <div class="faq-answer" id="faq-answer-2">
+                <div class="faq-answer">
                     <ul>
                         <li>Fully furnished with furniture</li>
                         <li>Kitchen appliances included</li>
@@ -126,11 +139,10 @@
             
             <!-- FAQ Item 4 -->
             <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(3)">
+                <div class="faq-question">
                     <h3>What's included in the rent?</h3>
-                    <i class="fas fa-chevron-down faq-icon"></i>
                 </div>
-                <div class="faq-answer" id="faq-answer-3">
+                <div class="faq-answer">
                     <ul>
                         <li>Basic utilities (water, gas, electricity)</li>
                         <li>Internet connection</li>
@@ -141,56 +153,52 @@
             
             <!-- FAQ Item 5 -->
             <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(4)">
+                <div class="faq-question">
                     <h3>Can I rent without speaking Japanese?</h3>
-                    <i class="fas fa-chevron-down faq-icon"></i>
                 </div>
-                <div class="faq-answer" id="faq-answer-4">
+                <div class="faq-answer">
                     <ul>
                         <li>English-speaking staff</li>
-                        <li>Full English support</li>
-                        <li>No Japanese required</li>
+                        <li>All documents in English</li>
+                        <li>24/7 English support available</li>
                     </ul>
                 </div>
             </div>
             
             <!-- FAQ Item 6 -->
             <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(5)">
-                    <h3>How far in advance should I apply?</h3>
-                    <i class="fas fa-chevron-down faq-icon"></i>
+                <div class="faq-question">
+                    <h3>What areas do you cover?</h3>
                 </div>
-                <div class="faq-answer" id="faq-answer-5">
+                <div class="faq-answer">
                     <ul>
-                        <li>Minimum: 2 weeks in advance</li>
-                        <li>Recommended: 4 weeks in advance</li>
-                        <li>Earlier for peak seasons</li>
+                        <li>Central Tokyo (Shibuya, Shinjuku, Roppongi)</li>
+                        <li>Popular expat areas</li>
+                        <li>Near major train stations</li>
                     </ul>
                 </div>
             </div>
             
             <!-- FAQ Item 7 -->
             <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(6)">
-                    <h3>What neighborhoods do you serve?</h3>
-                    <i class="fas fa-chevron-down faq-icon"></i>
+                <div class="faq-question">
+                    <h3>How do I apply for a flat?</h3>
                 </div>
-                <div class="faq-answer" id="faq-answer-6">
+                <div class="faq-answer">
                     <ul>
-                        <li>Popular areas: Shibuya, Shinjuku, Harajuku</li>
-                        <li>Traditional areas: Asakusa, Yanaka</li>
-                        <li>Business areas: Roppongi, Ginza, Ebisu</li>
+                        <li>Fill out online application form</li>
+                        <li>Submit required documents</li>
+                        <li>We'll contact you within 24 hours</li>
                     </ul>
                 </div>
             </div>
             
             <!-- FAQ Item 8 -->
             <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(7)">
+                <div class="faq-question">
                     <h3>Is there a security deposit?</h3>
-                    <i class="fas fa-chevron-down faq-icon"></i>
                 </div>
-                <div class="faq-answer" id="faq-answer-7">
+                <div class="faq-answer">
                     <ul>
                         <li>Amount: 1-2 months rent</li>
                         <li>Fully refundable</li>
@@ -255,30 +263,5 @@
         </div>
     </footer>
     <script src="./js/main.js"></script>
-    <script>
-        // FAQ toggle functionality
-        function toggleFAQ(index) {
-            const answer = document.getElementById(`faq-answer-${index}`);
-            const question = answer.previousElementSibling;
-            const icon = question.querySelector('.faq-icon');
-            
-            // Toggle the answer visibility
-            if (answer.style.display === 'block') {
-                answer.style.display = 'none';
-                icon.style.transform = 'rotate(0deg)';
-            } else {
-                answer.style.display = 'block';
-                icon.style.transform = 'rotate(180deg)';
-            }
-        }
-        
-        // Initialize FAQ items to be collapsed
-        document.addEventListener('DOMContentLoaded', function() {
-            const faqAnswers = document.querySelectorAll('.faq-answer');
-            faqAnswers.forEach(answer => {
-                answer.style.display = 'none';
-            });
-        });
-    </script>
 </body>
 </html>

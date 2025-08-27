@@ -1601,47 +1601,7 @@ img {
     transform: translateY(-2px) scale(1.1);
 }
 
-/* FAQ Accordion Styles */
-.faq-question {
-    cursor: pointer;
-    padding: 1rem;
-    background: #2a2a2a;
-    border: 1px solid #404040;
-    border-radius: 8px;
-    margin-bottom: 0.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: all 0.3s ease;
-}
 
-.faq-question:hover {
-    background: #333333;
-}
-
-.faq-question h3 {
-    margin: 0;
-    font-size: 1.1rem;
-}
-
-.faq-icon {
-    transition: transform 0.3s ease;
-    color: var(--primary-color);
-}
-
-.faq-answer {
-    padding: 1rem;
-    background: #1a1a1a;
-    border: 1px solid #404040;
-    border-top: none;
-    border-radius: 0 0 8px 8px;
-    margin-bottom: 1rem;
-    display: none;
-}
-
-.faq-item {
-    margin-bottom: 1rem;
-}
 
 /* Responsive enhancements */
 @media (max-width: 768px) {
