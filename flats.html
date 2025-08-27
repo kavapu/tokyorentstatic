@@ -99,16 +99,6 @@
                 <h3 class="mb-0">Showing <span class="text-primary">10</span> available apartments</h3>
                 <small class="text-muted">Updated daily with the latest availability</small>
             </div>
-            <div class="d-flex gap-2">
-                <button class="btn btn-outline-primary btn-sm active">
-                    <i class="fas fa-th-large me-1"></i>
-                    Grid
-                </button>
-                <button class="btn btn-outline-primary btn-sm">
-                    <i class="fas fa-list me-1"></i>
-                    List
-                </button>
-            </div>
         </div>
 
         <!-- Flats Grid -->
@@ -681,9 +671,10 @@
     <script>
         // Filter functionality
         document.addEventListener('DOMContentLoaded', function() {
-            const locationSelect = document.querySelector('select[style*="min-width: 150px"]');
-            const priceSelect = document.querySelector('select[style*="min-width: 120px"]:nth-of-type(2)');
-            const sizeSelect = document.querySelector('select[style*="min-width: 120px"]:nth-of-type(3)');
+            // Get all the filter elements
+            const locationSelect = document.querySelector('select option[value="shibuya"]').parentElement;
+            const priceSelect = document.querySelector('select option[value="0-80000"]').parentElement;
+            const sizeSelect = document.querySelector('select option[value="1"]').parentElement;
             const filterBtn = document.querySelector('.btn-outline-primary');
             const resetBtn = document.querySelector('.btn-secondary');
             const flatCards = document.querySelectorAll('.flat-card');
@@ -693,6 +684,8 @@
                 const selectedLocation = locationSelect.value;
                 const selectedPrice = priceSelect.value;
                 const selectedSize = sizeSelect.value;
+
+                let visibleCount = 0;
 
                 flatCards.forEach(card => {
                     let showCard = true;
@@ -727,14 +720,18 @@
                     }
 
                     // Show/hide card
-                    card.style.display = showCard ? 'block' : 'none';
+                    if (showCard) {
+                        card.style.display = 'block';
+                        visibleCount++;
+                    } else {
+                        card.style.display = 'none';
+                    }
                 });
 
                 // Update results count
-                const visibleCards = document.querySelectorAll('.flat-card[style*="display: block"], .flat-card:not([style*="display: none"])');
                 const resultsCount = document.querySelector('.text-primary');
                 if (resultsCount) {
-                    resultsCount.textContent = visibleCards.length;
+                    resultsCount.textContent = visibleCount;
                 }
             }
 
@@ -761,33 +758,6 @@
             }
             if (resetBtn) {
                 resetBtn.addEventListener('click', resetFilters);
-            }
-
-            // Grid/List view toggle
-            const gridBtn = document.querySelector('.btn-outline-primary.btn-sm.active');
-            const listBtn = document.querySelector('.btn-outline-primary.btn-sm:not(.active)');
-            const flatsGrid = document.querySelector('.flats-grid');
-
-            if (gridBtn && listBtn && flatsGrid) {
-                gridBtn.addEventListener('click', function() {
-                    gridBtn.classList.add('active');
-                    listBtn.classList.remove('active');
-                    flatsGrid.style.display = 'grid';
-                });
-
-                listBtn.addEventListener('click', function() {
-                    listBtn.classList.add('active');
-                    gridBtn.classList.remove('active');
-                    flatsGrid.style.display = 'block';
-                    
-                    // Add list styling
-                    flatCards.forEach(card => {
-                        card.style.display = 'flex';
-                        card.style.flexDirection = 'row';
-                        card.style.maxWidth = '100%';
-                        card.style.marginBottom = '2rem';
-                    });
-                });
             }
         });
     </script>
