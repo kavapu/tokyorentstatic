@@ -17,10 +17,10 @@ html, body {
 
 body {
     font-family: 'Nunito Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    line-height: 1.5;
+    line-height: 1.4;
     color: var(--text-primary);
     background-color: #000000;
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 400;
     margin: 0;
     padding: 0;
@@ -52,10 +52,10 @@ body {
 
 body {
     font-family: 'Nunito Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    line-height: 1.5;
+    line-height: 1.4;
     color: var(--text-primary);
     background-color: #000000;
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 400;
     margin: 0;
     padding: 0;
@@ -63,7 +63,7 @@ body {
 }
 
 .container {
-    max-width: 1000px;
+    max-width: 800px;
     margin: 0 auto;
     padding: 0 1rem;
 }
@@ -82,12 +82,12 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--text-primary);
 }
 
-h1 { font-size: 2.2rem; font-weight: 700; }
-h2 { font-size: 1.8rem; font-weight: 600; }
-h3 { font-size: 1.4rem; font-weight: 600; }
-h4 { font-size: 1.2rem; font-weight: 600; }
-h5 { font-size: 1.1rem; font-weight: 600; }
-h6 { font-size: 1rem; font-weight: 600; }
+h1 { font-size: 2rem; font-weight: 700; }
+h2 { font-size: 1.6rem; font-weight: 600; }
+h3 { font-size: 1.3rem; font-weight: 600; }
+h4 { font-size: 1.1rem; font-weight: 600; }
+h5 { font-size: 1rem; font-weight: 600; }
+h6 { font-size: 0.9rem; font-weight: 600; }
 
 p {
     margin-bottom: 1rem;
@@ -126,7 +126,7 @@ p {
     cursor: pointer;
     transition: all 0.2s ease-in-out;
     font-size: 0.875rem;
-    line-height: 1.5;
+    line-height: 1.4;
     white-space: nowrap;
     vertical-align: middle;
     user-select: none;
@@ -376,7 +376,7 @@ p {
     font-size: 1.125rem;
     margin-bottom: 2rem;
     color: var(--text-secondary);
-    line-height: 1.5;
+    line-height: 1.4;
     font-weight: 400;
 }
 
@@ -471,7 +471,7 @@ p {
 
 .feature-card p {
     color: #cccccc;
-    line-height: 1.5;
+    line-height: 1.4;
 }
 
 /* Contact Section */
@@ -597,7 +597,7 @@ p {
 }
 
 .flat-image {
-    height: 160px;
+    height: 140px;
     background: var(--accent-color);
     display: flex;
     align-items: center;
@@ -636,7 +636,7 @@ p {
 }
 
 .flat-content {
-    padding: 1.25rem;
+    padding: 1rem;
 }
 
 .flat-title {
@@ -1201,7 +1201,7 @@ p {
     border-radius: var(--border-radius-sm);
     cursor: pointer;
     transition: all 0.2s ease;
-    line-height: 1.5;
+    line-height: 1.4;
     text-align: center;
     white-space: nowrap;
     user-select: none;
@@ -1357,7 +1357,7 @@ p {
     font-size: 1rem;
     font-weight: 400;
     font-family: 'Nunito Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    line-height: 1.5;
+    line-height: 1.4;
     color: #ffffff;
     background-color: #2a2a2a;
     background-clip: padding-box;
@@ -1492,9 +1492,9 @@ small, .small {
 /* Enhanced flat card styling */
 .flats-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 1.5rem;
-    margin-top: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
 }
 
 .flat-card .flat-image {
