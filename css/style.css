@@ -20,7 +20,7 @@ body {
     line-height: 1.5;
     color: var(--text-primary);
     background-color: #000000;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 400;
     margin: 0;
     padding: 0;
@@ -55,7 +55,7 @@ body {
     line-height: 1.5;
     color: var(--text-primary);
     background-color: #000000;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 400;
     margin: 0;
     padding: 0;
@@ -63,7 +63,7 @@ body {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 0 1rem;
 }
@@ -82,11 +82,11 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--text-primary);
 }
 
-h1 { font-size: 2.5rem; font-weight: 700; }
-h2 { font-size: 2rem; font-weight: 600; }
-h3 { font-size: 1.5rem; font-weight: 600; }
-h4 { font-size: 1.25rem; font-weight: 600; }
-h5 { font-size: 1.125rem; font-weight: 600; }
+h1 { font-size: 2.2rem; font-weight: 700; }
+h2 { font-size: 1.8rem; font-weight: 600; }
+h3 { font-size: 1.4rem; font-weight: 600; }
+h4 { font-size: 1.2rem; font-weight: 600; }
+h5 { font-size: 1.1rem; font-weight: 600; }
 h6 { font-size: 1rem; font-weight: 600; }
 
 p {
@@ -597,7 +597,7 @@ p {
 }
 
 .flat-image {
-    height: 180px;
+    height: 160px;
     background: var(--accent-color);
     display: flex;
     align-items: center;
@@ -636,7 +636,7 @@ p {
 }
 
 .flat-content {
-    padding: 1.5rem;
+    padding: 1.25rem;
 }
 
 .flat-title {
@@ -1490,6 +1490,13 @@ small, .small {
 }
 
 /* Enhanced flat card styling */
+.flats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
 .flat-card .flat-image {
     position: relative;
     overflow: hidden;
