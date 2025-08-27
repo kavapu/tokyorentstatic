@@ -423,7 +423,7 @@ p {
     text-align: center;
     padding: 2rem 1.5rem;
     border-radius: 8px;
-    background: #2a2a2a;
+    background: transparent;
     border: 1px solid #404040;
     transition: all 0.3s ease;
     position: relative;
@@ -477,7 +477,7 @@ p {
 /* Contact Section */
 .contact-section {
     padding: 3rem 0;
-    background: #1a1a1a;
+    background: transparent;
 }
 
 .contact-grid {
@@ -502,7 +502,7 @@ p {
     align-items: flex-start;
     margin-bottom: 1rem;
     padding: 1.25rem;
-    background: #2a2a2a;
+    background: transparent;
     border-radius: 6px;
     border: 1px solid #404040;
 }
@@ -529,7 +529,7 @@ p {
 }
 
 .contact-form {
-    background: #2a2a2a;
+    background: transparent;
     padding: 2rem;
     border-radius: 6px;
     border: 1px solid #404040;
@@ -601,7 +601,7 @@ p {
 /* Flats Section */
 .flats-section {
     padding: 4rem 0;
-    background: #1a1a1a;
+    background: transparent;
 }
 
 .flats-grid {
@@ -611,7 +611,7 @@ p {
 }
 
 .flat-card {
-    background: #2a2a2a;
+    background: transparent;
     border-radius: 6px;
     overflow: hidden;
     border: 1px solid #404040;
@@ -789,7 +789,7 @@ p {
 /* Apply Form */
 .apply-section {
     padding: 4rem 0;
-    background: #000000;
+    background: transparent;
 }
 
 .apply-form-container {
@@ -798,7 +798,7 @@ p {
 }
 
 .apply-form {
-    background: #111111;
+    background: transparent;
     padding: 2rem;
     border-radius: 6px;
     border: 1px solid #333333;
@@ -861,7 +861,7 @@ p {
     font-size: 0.875rem;
     font-family: 'Nunito Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     transition: all 0.2s ease;
-    background: #2a2a2a;
+    background: transparent;
     color: #ffffff;
 }
 
@@ -927,7 +927,7 @@ p {
 /* FAQ Section */
 .faq-section {
     padding: 4rem 0;
-    background: #1a1a1a;
+    background: transparent;
 }
 
 .faq-container {
@@ -940,7 +940,7 @@ p {
     border-radius: 8px;
     margin-bottom: 1rem;
     overflow: hidden;
-    background: var(--white);
+    background: transparent;
     box-shadow: var(--shadow-light);
     transition: all 0.3s ease;
 }
@@ -951,7 +951,7 @@ p {
 
 .faq-question {
     padding: 1.5rem;
-    background: #2a2a2a;
+    background: transparent;
     cursor: pointer;
     display: flex;
     justify-content: space-between;
@@ -988,7 +988,7 @@ p {
     max-height: 0;
     overflow: hidden;
     transition: all 0.3s ease;
-    background: #2a2a2a;
+    background: transparent;
 }
 
 .faq-item.active .faq-answer {
@@ -1001,7 +1001,7 @@ p {
 
 .faq-contact {
     text-align: center;
-    background: #2a2a2a;
+    background: transparent;
     padding: 2rem;
     border-radius: 8px;
     border: 1px solid #404040;
@@ -1025,7 +1025,7 @@ p {
 
 /* Footer */
 .footer {
-    background: #1a1a1a;
+    background: transparent;
     color: #ffffff;
     padding: 4rem 0 2rem;
     border-top: 1px solid #404040;
