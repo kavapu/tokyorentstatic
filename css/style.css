@@ -1495,6 +1495,55 @@ small, .small {
     overflow: hidden;
 }
 
+/* Image styling */
+.flat-card .flat-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.flat-card:hover .flat-image img {
+    transform: scale(1.05);
+}
+
+/* Hero background image */
+.hero.with-bg-image {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.hero.with-bg-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(26, 26, 26, 0.7);
+    z-index: 1;
+}
+
+.hero.with-bg-image .hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Logo image styling */
+.nav-logo img {
+    height: 32px;
+    width: auto;
+    margin-right: 0.75rem;
+}
+
+/* Responsive images */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 .flat-card .flat-image::after {
     content: '';
     position: absolute;
