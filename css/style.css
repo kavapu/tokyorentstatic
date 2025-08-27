@@ -6,7 +6,7 @@
 }
 
 html, body {
-    background-color: #1a1a1a;
+    background-color: #2a2a2a;
     min-height: 100vh;
     width: 100%;
     margin: 0;
@@ -19,7 +19,7 @@ body {
     font-family: 'Nunito Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     line-height: 1.5;
     color: var(--text-primary);
-    background-color: #000000;
+    background-color: #2a2a2a;
     font-size: 13px;
     font-weight: 400;
     margin: 0;
@@ -32,16 +32,16 @@ body {
     --primary-color: #ffffff;
     --primary-light: #cccccc;
     --primary-dark: #ffffff;
-    --primary-ultra-light: #2a2a2a;
-    --secondary-color: #1a1a1a;
-    --accent-color: #404040;
-    --accent-light: #2a2a2a;
+    --primary-ultra-light: #3a3a3a;
+    --secondary-color: #2a2a2a;
+    --accent-color: #505050;
+    --accent-light: #3a3a3a;
     --text-primary: #ffffff;
     --text-secondary: #cccccc;
     --text-light: #999999;
     --white: #ffffff;
-    --black: #1a1a1a;
-    --border-color: #404040;
+    --black: #2a2a2a;
+    --border-color: #505050;
     --shadow-light: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
     --shadow-medium: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
     --shadow-large: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
@@ -54,7 +54,7 @@ body {
     font-family: 'Nunito Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     line-height: 1.5;
     color: var(--text-primary);
-    background-color: #000000;
+    background-color: #2a2a2a;
     font-size: 13px;
     font-weight: 400;
     margin: 0;
