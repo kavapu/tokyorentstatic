@@ -715,6 +715,11 @@
             transform: scale(1.1);
         }
 
+        .modal-image-container {
+            position: relative;
+            display: inline-block;
+        }
+
         .modal-image {
             width: 100%;
             height: auto;
@@ -722,6 +727,50 @@
             object-fit: contain;
             border-radius: 12px 12px 0 0;
             background-color: #1a1a1a;
+        }
+
+        .modal-nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+
+        .modal-nav-btn:hover {
+            background: rgba(0, 0, 0, 0.9);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .modal-prev {
+            left: 20px;
+        }
+
+        .modal-next {
+            right: 20px;
+        }
+
+        .modal-counter {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
         }
 
         .modal-body {
@@ -905,15 +954,34 @@
         };
 
         // Modal functions
+        let currentFlatId = 1;
+        const totalFlats = Object.keys(flatData).length;
+
         function openFlatModal(flatId) {
+            currentFlatId = flatId;
+            updateModalContent();
             const modal = document.getElementById('flatModal');
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function updateModalContent() {
             const modalContent = document.getElementById('modalContent');
-            const flat = flatData[flatId];
+            const flat = flatData[currentFlatId];
 
             if (flat) {
                 modalContent.innerHTML = `
-                    <div style="display: flex; flex-direction: column; width: fit-content;">
-                        <img src="${flat.image}" alt="${flat.title}" class="modal-image">
+                    <div style="display: flex; flex-direction: column; width: fit-content; position: relative;">
+                        <div class="modal-image-container">
+                            <img src="${flat.image}" alt="${flat.title}" class="modal-image">
+                            <button class="modal-nav-btn modal-prev" onclick="navigateFlat(-1)">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="modal-nav-btn modal-next" onclick="navigateFlat(1)">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                            <div class="modal-counter">${currentFlatId} / ${totalFlats}</div>
+                        </div>
                         <div class="modal-body">
                             <h2 class="modal-title">${flat.title}</h2>
                             <div class="modal-price">${flat.price}</div>
@@ -930,7 +998,7 @@
                                 ${flat.amenities.map(amenity => `<span>${amenity}</span>`).join('')}
                             </div>
                             <div class="modal-actions">
-                                <a href="./apply.html?flat=${flatId}" class="btn btn-primary">
+                                <a href="./apply.html?flat=${currentFlatId}" class="btn btn-primary">
                                     <i class="fas fa-edit me-1"></i>
                                     Apply Now
                                 </a>
@@ -942,9 +1010,21 @@
                         </div>
                     </div>
                 `;
-                modal.style.display = 'block';
-                document.body.style.overflow = 'hidden';
             }
+        }
+
+        function navigateFlat(direction) {
+            let newFlatId = currentFlatId + direction;
+            
+            // Handle circular navigation
+            if (newFlatId < 1) {
+                newFlatId = totalFlats;
+            } else if (newFlatId > totalFlats) {
+                newFlatId = 1;
+            }
+            
+            currentFlatId = newFlatId;
+            updateModalContent();
         }
 
         function closeFlatModal() {
@@ -960,6 +1040,20 @@
                 closeFlatModal();
             }
         }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function(event) {
+            const modal = document.getElementById('flatModal');
+            if (modal.style.display === 'block') {
+                if (event.key === 'ArrowLeft') {
+                    navigateFlat(-1);
+                } else if (event.key === 'ArrowRight') {
+                    navigateFlat(1);
+                } else if (event.key === 'Escape') {
+                    closeFlatModal();
+                }
+            }
+        });
 
         // Filter functionality
         document.addEventListener('DOMContentLoaded', function() {
