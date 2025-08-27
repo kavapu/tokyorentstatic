@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
             location: "Shibuya, Tokyo",
             size: "25㎡",
             bedrooms: 1,
-            description: "Modern studio apartment in the heart of Shibuya, perfect for singles or couples.",
+            description: "Modern studio flat in the heart of Shibuya, perfect for singles or couples.",
             amenities: ["Fully furnished", "Kitchen", "Bathroom", "WiFi", "Air conditioning", "Washing machine"],
             nearby: ["Shibuya Station (5 min walk)", "Shopping centers", "Restaurants", "Parks"],
             images: ["/images/flat1-1.jpg", "/images/flat1-2.jpg", "/images/flat1-3.jpg"]
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
             location: "Asakusa, Tokyo",
             size: "30㎡",
             bedrooms: 1,
-            description: "Charming traditional apartment near Senso-ji Temple with authentic Japanese atmosphere.",
+            description: "Charming traditional flat near Senso-ji Temple with authentic Japanese atmosphere.",
             amenities: ["Traditional furnishings", "Kitchen", "Bathroom", "WiFi", "Heating", "Balcony"],
             nearby: ["Senso-ji Temple", "Asakusa Station", "Traditional shops", "Riverside"],
             images: ["/images/flat2-1.jpg", "/images/flat2-2.jpg", "/images/flat2-3.jpg"]

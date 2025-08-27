@@ -7,6 +7,33 @@
     <link rel="stylesheet" href="./css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .faq-answer ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .faq-answer li {
+            padding: 0.5rem 0;
+            color: #cccccc;
+            border-bottom: 1px solid #404040;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .faq-answer li:before {
+            content: "•";
+            color: var(--primary-color);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        .faq-answer li:last-child {
+            border-bottom: none;
+        }
+    </style>
 </head>
 <body>
     <header class="header">
@@ -45,7 +72,7 @@
 <section class="faq-hero">
     <div class="container">
         <h1 class="page-title">Frequently Asked Questions</h1>
-        <p class="page-subtitle">Find answers to common questions about renting apartments in Tokyo</p>
+        <p class="page-subtitle">Find answers to common questions about renting flats in Tokyo</p>
     </div>
 </section>
 
@@ -55,11 +82,15 @@
             <!-- FAQ Item 1 -->
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFAQ(0)">
-                    <h3>What documents do I need to rent an apartment?</h3>
+                    <h3>What documents do I need to rent an flat?</h3>
                     <i class="fas fa-chevron-down faq-icon"></i>
                 </div>
                 <div class="faq-answer" id="faq-answer-0">
-                    <p>You'll need a valid passport, visa (if applicable), proof of income or financial support, and a Japanese guarantor or guarantor company.</p>
+                    <ul>
+                        <li>Valid passport and visa (if applicable)</li>
+                        <li>Proof of income or financial support</li>
+                        <li>Japanese guarantor or guarantor company</li>
+                    </ul>
                 </div>
             </div>
             
@@ -70,18 +101,26 @@
                     <i class="fas fa-chevron-down faq-icon"></i>
                 </div>
                 <div class="faq-answer" id="faq-answer-1">
-                    <p>We offer flexible rental periods from 1 month to 2 years. Short-term rentals (1-6 months) and long-term rentals (6+ months) are available.</p>
+                    <ul>
+                        <li>Short-term: 1-6 months</li>
+                        <li>Long-term: 6+ months</li>
+                        <li>Maximum: 2 years</li>
+                    </ul>
                 </div>
             </div>
             
             <!-- FAQ Item 3 -->
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFAQ(2)">
-                    <h3>Do you provide furnished apartments?</h3>
+                    <h3>Do you provide furnished flats?</h3>
                     <i class="fas fa-chevron-down faq-icon"></i>
                 </div>
                 <div class="faq-answer" id="faq-answer-2">
-                    <p>Yes! Most of our apartments come fully furnished with basic amenities including furniture, kitchen appliances, and internet connection.</p>
+                    <ul>
+                        <li>Fully furnished with furniture</li>
+                        <li>Kitchen appliances included</li>
+                        <li>Internet connection provided</li>
+                    </ul>
                 </div>
             </div>
             
@@ -92,7 +131,11 @@
                     <i class="fas fa-chevron-down faq-icon"></i>
                 </div>
                 <div class="faq-answer" id="faq-answer-3">
-                    <p>Rent typically includes basic utilities (water, gas, electricity) and internet. Additional services like cleaning can be arranged for an extra fee.</p>
+                    <ul>
+                        <li>Basic utilities (water, gas, electricity)</li>
+                        <li>Internet connection</li>
+                        <li>Cleaning services available (extra fee)</li>
+                    </ul>
                 </div>
             </div>
             
@@ -103,7 +146,11 @@
                     <i class="fas fa-chevron-down faq-icon"></i>
                 </div>
                 <div class="faq-answer" id="faq-answer-4">
-                    <p>Absolutely! Our staff speaks English and we provide full support in English throughout the rental process.</p>
+                    <ul>
+                        <li>English-speaking staff</li>
+                        <li>Full English support</li>
+                        <li>No Japanese required</li>
+                    </ul>
                 </div>
             </div>
             
@@ -114,7 +161,11 @@
                     <i class="fas fa-chevron-down faq-icon"></i>
                 </div>
                 <div class="faq-answer" id="faq-answer-5">
-                    <p>We recommend applying at least 2-4 weeks before your desired move-in date to ensure smooth processing and availability.</p>
+                    <ul>
+                        <li>Minimum: 2 weeks in advance</li>
+                        <li>Recommended: 4 weeks in advance</li>
+                        <li>Earlier for peak seasons</li>
+                    </ul>
                 </div>
             </div>
             
@@ -125,7 +176,11 @@
                     <i class="fas fa-chevron-down faq-icon"></i>
                 </div>
                 <div class="faq-answer" id="faq-answer-6">
-                    <p>We have properties across Tokyo including popular areas like Shibuya, Shinjuku, Harajuku, Asakusa, and many more.</p>
+                    <ul>
+                        <li>Popular areas: Shibuya, Shinjuku, Harajuku</li>
+                        <li>Traditional areas: Asakusa, Yanaka</li>
+                        <li>Business areas: Roppongi, Ginza, Ebisu</li>
+                    </ul>
                 </div>
             </div>
             
@@ -136,7 +191,11 @@
                     <i class="fas fa-chevron-down faq-icon"></i>
                 </div>
                 <div class="faq-answer" id="faq-answer-7">
-                    <p>Yes, typically 1-2 months rent as security deposit, which is refundable upon move-out if the apartment is in good condition.</p>
+                    <ul>
+                        <li>Amount: 1-2 months rent</li>
+                        <li>Fully refundable</li>
+                        <li>Returned if flat is in good condition</li>
+                    </ul>
                 </div>
             </div>
         </div>
