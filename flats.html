@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Flats - TokyoRent</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="./index.html">
+                        <i class="fas fa-home"></i>
+                        <span>TokyoRent</span>
+                    </a>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="./index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./flats.html" class="nav-link active">Available Flats</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./apply.html" class="nav-link">Apply</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./faq.html" class="nav-link">FAQ</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="main-content">
+
+<!-- Page Hero -->
+<section class="flats-hero">
+    <div class="container">
+        <h1 class="page-title">Available Flats</h1>
+        <p class="page-subtitle">Discover our carefully curated selection of affordable and comfortable apartments across Tokyo's most desirable neighborhoods.</p>
+    </div>
+</section>
+
+<!-- Flats Section -->
+<section class="flats-section">
+    <div class="container">
+        <!-- Filters Section -->
+        <div class="filters-section mb-5" style="background: var(--white); padding: 2rem; border-radius: var(--border-radius); box-shadow: var(--shadow-light); border: 1px solid var(--border-color);">
+            <div class="d-flex justify-content-between align-items-center flex-wrap gap-3">
+                <div class="d-flex gap-3 flex-wrap">
+                    <select class="form-control" style="min-width: 150px;">
+                        <option value="">All Locations</option>
+                        <option value="shibuya">Shibuya</option>
+                        <option value="shinjuku">Shinjuku</option>
+                        <option value="harajuku">Harajuku</option>
+                        <option value="asakusa">Asakusa</option>
+                        <option value="roppongi">Roppongi</option>
+                        <option value="ginza">Ginza</option>
+                    </select>
+                    <select class="form-control" style="min-width: 120px;">
+                        <option value="">All Prices</option>
+                        <option value="0-80000">Under ¥80,000</option>
+                        <option value="80000-120000">¥80,000 - ¥120,000</option>
+                        <option value="120000-200000">¥120,000 - ¥200,000</option>
+                        <option value="200000+">Over ¥200,000</option>
+                    </select>
+                    <select class="form-control" style="min-width: 120px;">
+                        <option value="">All Sizes</option>
+                        <option value="1">1 Bedroom</option>
+                        <option value="2">2 Bedrooms</option>
+                        <option value="3+">3+ Bedrooms</option>
+                    </select>
+                </div>
+                <div class="d-flex gap-2">
+                    <button class="btn btn-outline-primary btn-sm">
+                        <i class="fas fa-filter me-1"></i>
+                        Filter
+                    </button>
+                    <button class="btn btn-secondary btn-sm">
+                        <i class="fas fa-sync-alt me-1"></i>
+                        Reset
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Results Summary -->
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <div>
+                <h3 class="mb-0">Showing <span class="text-primary">10</span> available apartments</h3>
+                <small class="text-muted">Updated daily with the latest availability</small>
+            </div>
+            <div class="d-flex gap-2">
+                <button class="btn btn-outline-primary btn-sm active">
+                    <i class="fas fa-th-large me-1"></i>
+                    Grid
+                </button>
+                <button class="btn btn-outline-primary btn-sm">
+                    <i class="fas fa-list me-1"></i>
+                    List
+                </button>
+            </div>
+        </div>
+
+        <!-- Flats Grid -->
+        <div class="flats-grid">
+            <!-- Flat 1 -->
+            <div class="flat-card">
+                <div class="flat-image">
+                    <div class="flat-placeholder">
+                        <i class="fas fa-home"></i>
+                        <p>Cozy Studio in Shibuya</p>
+                    </div>
+                    <div class="flat-badge" style="position: absolute; top: 1rem; right: 1rem; background: var(--primary-color); color: white; padding: 0.25rem 0.75rem; border-radius: var(--border-radius-sm); font-size: 0.875rem; font-weight: 600;">
+                        Available
+                    </div>
+                </div>
+                <div class="flat-content">
+                    <div class="d-flex justify-content-between align-items-start mb-2">
+                        <h3 class="flat-title">Cozy Studio in Shibuya</h3>
+                        <div class="flat-price">¥80,000/month</div>
+                    </div>
+                    
+                    <div class="flat-location mb-3">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Shibuya, Tokyo
+                    </div>
+                    
+                    <div class="flat-specs mb-3">
+                        <span><i class="fas fa-ruler-combined"></i> 25㎡</span>
+                        <span><i class="fas fa-bed"></i> 1 Bedroom</span>
+                        <span><i class="fas fa-wifi"></i> WiFi Included</span>
+                    </div>
+                    
+                    <p class="flat-description">Modern studio apartment in the heart of Shibuya, perfect for singles or couples.</p>
+                    
+                    <div class="flat-amenities mb-3" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                        <span style="background: var(--accent-light); color: var(--primary-color); padding: 0.25rem 0.5rem; border-radius: var(--border-radius-sm); font-size: 0.75rem; font-weight: 500;">Furnished</span>
+                        <span style="background: var(--accent-light); color: var(--primary-color); padding: 0.25rem 0.5rem; border-radius: var(--border-radius-sm); font-size: 0.75rem; font-weight: 500;">Kitchen</span>
+                        <span style="background: var(--accent-light); color: var(--primary-color); padding: 0.25rem 0.5rem; border-radius: var(--border-radius-sm); font-size: 0.75rem; font-weight: 500;">AC</span>
+                        <span style="background: var(--accent-light); color: var(--primary-color); padding: 0.25rem 0.5rem; border-radius: var(--border-radius-sm); font-size: 0.75rem; font-weight: 500;">Laundry</span>
+                    </div>
+                    
+                    <div class="flat-actions">
+                        <a href="./apply.html?flat=1" class="btn btn-primary">
+                            <i class="fas fa-edit me-1"></i>
+                            Apply Now
+                        </a>
+                        <button class="btn btn-outline-primary flat-details-btn" data-flat-id="1">
+                            <i class="fas fa-info-circle me-1"></i>
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Flat 2 -->
+            <div class="flat-card">
+                <div class="flat-image">
+                    <div class="flat-placeholder">
+                        <i class="fas fa-home"></i>
+                        <p>Traditional Apartment in Asakusa</p>
+                    </div>
+                    <div class="flat-badge" style="position: absolute; top: 1rem; right: 1rem; background: var(--primary-color); color: white; padding: 0.25rem 0.75rem; border-radius: var(--border-radius-sm); font-size: 0.875rem; font-weight: 600;">
+                        Available
+                    </div>
+                </div>
+                <div class="flat-content">
+                    <div class="d-flex justify-content-between align-items-start mb-2">
+                        <h3 class="flat-title">Traditional Apartment in Asakusa</h3>
+                        <div class="flat-price">¥65,000/month</div>
+                    </div>
+                    
+                    <div class="flat-location mb-3">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Asakusa, Tokyo
+                    </div>
+                    
+                    <div class="flat-specs mb-3">
+                        <span><i class="fas fa-ruler-combined"></i> 30㎡</span>
+                        <span><i class="fas fa-bed"></i> 1 Bedroom</span>
+                        <span><i class="fas fa-wifi"></i> WiFi Included</span>
+                    </div>
+                    
+                    <p class="flat-description">Charming traditional apartment near Senso-ji Temple with authentic Japanese atmosphere.</p>
+                    
+                    <div class="flat-amenities mb-3" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                        <span style="background: var(--accent-light); color: var(--primary-color); padding: 0.25rem 0.5rem; border-radius: var(--border-radius-sm); font-size: 0.75rem; font-weight: 500;">Furnished</span>
+                        <span style="background: var(--accent-light); color: var(--primary-color); padding: 0.25rem 0.5rem; border-radius: var(--border-radius-sm); font-size: 0.75rem; font-weight: 500;">Kitchen</span>
+                        <span style="background: var(--accent-light); color: var(--primary-color); padding: 0.25rem 0.5rem; border-radius: var(--border-radius-sm); font-size: 0.75rem; font-weight: 500;">AC</span>
+                        <span style="background: var(--accent-light); color: var(--primary-color); padding: 0.25rem 0.5rem; border-radius: var(--border-radius-sm); font-size: 0.75rem; font-weight: 500;">Laundry</span>
+                    </div>
+                    
+                    <div class="flat-actions">
+                        <a href="./apply.html?flat=2" class="btn btn-primary">
+                            <i class="fas fa-edit me-1"></i>
+                            Apply Now
+                        </a>
+                        <button class="btn btn-outline-primary flat-details-btn" data-flat-id="2">
+                            <i class="fas fa-info-circle me-1"></i>
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Flat 3 -->
+            <div class="flat-card">
+                <div class="flat-image">
+                    <div class="flat-placeholder">
+                        <i class="fas fa-home"></i>
+                        <p>Modern Loft in Roppongi</p>
+                    </div>
+                    <div class="flat-badge" style="position: absolute; top: 1rem; right: 1rem; background: var(--primary-color); color: white; padding: 0.25rem 0.75rem; border-radius: var(--border-radius-sm); font-size: 0.875rem; font-weight: 600;">
+                        Available
+                    </div>
+                </div>
+                <div class="flat-content">
+                    <div class="d-flex justify-content-between align-items-start mb-2">
+                        <h3 class="flat-title">Modern Loft in Roppongi</h3>
+                        <div class="flat-price">¥120,000/month</div>
+                    </div>
+                    
+                    <div class="flat-location mb-3">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Roppongi, Tokyo
+                    </div>
+                    
+                    <div class="flat-specs mb-3">
+                        <span><i class="fas fa-ruler-combined"></i> 45㎡</span>
+                        <span><i class="fas fa-bed"></i> 1 Bedroom</span>
+                        <span><i class="fas fa-wifi"></i> WiFi Included</span>
+                    </div>
+                    
+                    <p class="flat-description">Stylish loft-style apartment in trendy Roppongi with high ceilings and modern amenities.</p>
+                    
+                    <div class="flat-amenities mb-3" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                        <span style="background: var(--accent-light); color: var(--primary-color); padding: 0.25rem 0.5rem; border-radius: var(--border-radius-sm); font-size: 0.75rem; font-weight: 500;">Furnished</span>
+                        <span style="background: var(--accent-light); color: var(--primary-color); padding: 0.25rem 0.5rem; border-radius: var(--border-radius-sm); font-size: 0.75rem; font-weight: 500;">Kitchen</span>
+                        <span style="background: var(--accent-light); color: var(--primary-color); padding: 0.25rem 0.5rem; border-radius: var(--border-radius-sm); font-size: 0.75rem; font-weight: 500;">AC</span>
+                        <span style="background: var(--accent-light); color: var(--primary-color); padding: 0.25rem 0.5rem; border-radius: var(--border-radius-sm); font-size: 0.75rem; font-weight: 500;">Laundry</span>
+                    </div>
+                    
+                    <div class="flat-actions">
+                        <a href="./apply.html?flat=3" class="btn btn-primary">
+                            <i class="fas fa-edit me-1"></i>
+                            Apply Now
+                        </a>
+                        <button class="btn btn-outline-primary flat-details-btn" data-flat-id="3">
+                            <i class="fas fa-info-circle me-1"></i>
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Flat 4 -->
+            <div class="flat-card">
+                <div class="flat-image">
+                    <div class="flat-placeholder">
+                        <i class="fas fa-home"></i>
+                        <p>Family Apartment in Shinjuku</p>
+                    </div>
+                    <div class="flat-badge" style="position: absolute; top: 1rem; right: 1rem; background: var(--primary-color); color: white; padding: 0.25rem 0.75rem; border-radius: var(--border-radius-sm); font-size: 0.875rem; font-weight: 600;">
+                        Available
+                    </div>
+                </div>
+                <div class="flat-content">
+                    <div class="d-flex justify-content-between align-items-start mb-2">
+                        <h3 class="flat-title">Family Apartment in Shinjuku</h3>
+                        <div class="flat-price">¥150,000/month</div>
+                    </div>
+                    
+                    <div class="flat-location mb-3">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Shinjuku, Tokyo
+                    </div>
+                    
+                    <div class="flat-specs mb-3">
+                        <span><i class="fas fa-ruler-combined"></i> 60㎡</span>
+                        <span><i class="fas fa-bed"></i> 2 Bedrooms</span>
+                        <span><i class="fas fa-wifi"></i> WiFi Included</span>
+                    </div>
+                    
+                    <p class="flat-description">Spacious 2-bedroom apartment perfect for families, close to Shinjuku Station.</p>
+                    
+                    <div class="flat-amenities mb-3" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                        <span style="background: var(--accent-light); color: var(--primary-color); padding: 0.25rem 0.5rem; border-radius: var(--border-radius-sm); font-size: 0.75rem; font-weight: 500;">Furnished</span>
+                        <span style="background: var(--accent-light); color: var(--primary-color); padding: 0.25rem 0.5rem; border-radius: var(--border-radius-sm); font-size: 0.75rem; font-weight: 500;">Kitchen</span>
+                        <span style="background: var(--accent-light); color: var(--primary-color); padding: 0.25rem 0.5rem; border-radius: var(--border-radius-sm); font-size: 0.75rem; font-weight: 500;">AC</span>
+                        <span style="background: var(--accent-light); color: var(--primary-color); padding: 0.25rem 0.5rem; border-radius: var(--border-radius-sm); font-size: 0.75rem; font-weight: 500;">Laundry</span>
+                    </div>
+                    
+                    <div class="flat-actions">
+                        <a href="./apply.html?flat=4" class="btn btn-primary">
+                            <i class="fas fa-edit me-1"></i>
+                            Apply Now
+                        </a>
+                        <button class="btn btn-outline-primary flat-details-btn" data-flat-id="4">
+                            <i class="fas fa-info-circle me-1"></i>
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Flat 5 -->
+            <div class="flat-card">
+                <div class="flat-image">
+                    <div class="flat-placeholder">
+                        <i class="fas fa-home"></i>
+                        <p>Budget Studio in Ikebukuro</p>
+                    </div>
+                    <div class="flat-badge" style="position: absolute; top: 1rem; right: 1rem; background: var(--primary-color); color: white; padding: 0.25rem 0.75rem; border-radius: var(--border-radius-sm); font-size: 0.875rem; font-weight: 600;">
+                        Available
+                    </div>
+                </div>
+                <div class="flat-content">
+                    <div class="d-flex justify-content-between align-items-start mb-2">
+                        <h3 class="flat-title">Budget Studio in Ikebukuro</h3>
+                        <div class="flat-price">¥55,000/month</div>
+                    </div>
+                    
+                    <div class="flat-location mb-3">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Ikebukuro, Tokyo
+                    </div>
+                    
+                    <div class="flat-specs mb-3">
+                        <span><i class="fas fa-ruler-combined"></i> 20㎡</span>
+                        <span><i class="fas fa-bed"></i> 1 Bedroom</span>
+                        <span><i class="fas fa-wifi"></i> WiFi Included</span>
+                    </div>
+                    
+                    <p class="flat-description">Affordable studio apartment in vibrant Ikebukuro, great for students and young professionals.</p>
+                    
+                    <div class="flat-amenities mb-3" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                        <span style="background: var(--accent-light); color: var(--primary-color); padding: 0.25rem 0.5rem; border-radius: var(--border-radius-sm); font-size: 0.75rem; font-weight: 500;">Furnished</span>
+                        <span style="background: var(--accent-light); color: var(--primary-color); padding: 0.25rem 0.5rem; border-radius: var(--border-radius-sm); font-size: 0.75rem; font-weight: 500;">Kitchen</span>
+                        <span style="background: var(--accent-light); color: var(--primary-color); padding: 0.25rem 0.5rem; border-radius: var(--border-radius-sm); font-size: 0.75rem; font-weight: 500;">AC</span>
+                        <span style="background: var(--accent-light); color: var(--primary-color); padding: 0.25rem 0.5rem; border-radius: var(--border-radius-sm); font-size: 0.75rem; font-weight: 500;">Laundry</span>
+                    </div>
+                    
+                    <div class="flat-actions">
+                        <a href="./apply.html?flat=5" class="btn btn-primary">
+                            <i class="fas fa-edit me-1"></i>
+                            Apply Now
+                        </a>
+                        <button class="btn btn-outline-primary flat-details-btn" data-flat-id="5">
+                            <i class="fas fa-info-circle me-1"></i>
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Flat 6 -->
+            <div class="flat-card">
+                <div class="flat-image">
+                    <div class="flat-placeholder">
+                        <i class="fas fa-home"></i>
+                        <p>Luxury Apartment in Ginza</p>
+                    </div>
+                    <div class="flat-badge" style="position: absolute; top: 1rem; right: 1rem; background: var(--primary-color); color: white; padding: 0.25rem 0.75rem; border-radius: var(--border-radius-sm); font-size: 0.875rem; font-weight: 600;">
+                        Available
+                    </div>
+                </div>
+                <div class="flat-content">
+                    <div class="d-flex justify-content-between align-items-start mb-2">
+                        <h3 class="flat-title">Luxury Apartment in Ginza</h3>
+                        <div class="flat-price">¥200,000/month</div>
+                    </div>
+                    
+                    <div class="flat-location mb-3">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Ginza, Tokyo
+                    </div>
+                    
+                    <div class="flat-specs mb-3">
+                        <span><i class="fas fa-ruler-combined"></i> 70㎡</span>
+                        <span><i class="fas fa-bed"></i> 2 Bedrooms</span>
+                        <span><i class="fas fa-wifi"></i> WiFi Included</span>
+                    </div>
+                    
+                    <p class="flat-description">Premium apartment in upscale Ginza with luxury finishes and concierge service.</p>
+                    
+                    <div class="flat-amenities mb-3" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                        <span style="background: var(--accent-light); color: var(--primary-color); padding: 0.25rem 0.5rem; border-radius: var(--border-radius-sm); font-size: 0.75rem; font-weight: 500;">Furnished</span>
+                        <span style="background: var(--accent-light); color: var(--primary-color); padding: 0.25rem 0.5rem; border-radius: var(--border-radius-sm); font-size: 0.75rem; font-weight: 500;">Kitchen</span>
+                        <span style="background: var(--accent-light); color: var(--primary-color); padding: 0.25rem 0.5rem; border-radius: var(--border-radius-sm); font-size: 0.75rem; font-weight: 500;">AC</span>
+                        <span style="background: var(--accent-light); color: var(--primary-color); padding: 0.25rem 0.5rem; border-radius: var(--border-radius-sm); font-size: 0.75rem; font-weight: 500;">Laundry</span>
+                    </div>
+                    
+                    <div class="flat-actions">
+                        <a href="./apply.html?flat=6" class="btn btn-primary">
+                            <i class="fas fa-edit me-1"></i>
+                            Apply Now
+                        </a>
+                        <button class="btn btn-outline-primary flat-details-btn" data-flat-id="6">
+                            <i class="fas fa-info-circle me-1"></i>
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Flat 7 -->
+            <div class="flat-card">
+                <div class="flat-image">
+                    <div class="flat-placeholder">
+                        <i class="fas fa-home"></i>
+                        <p>Quiet Studio in Nakano</p>
+                    </div>
+                    <div class="flat-badge" style="position: absolute; top: 1rem; right: 1rem; background: var(--primary-color); color: white; padding: 0.25rem 0.75rem; border-radius: var(--border-radius-sm); font-size: 0.875rem; font-weight: 600;">
+                        Available
+                    </div>
+                </div>
+                <div class="flat-content">
+                    <div class="d-flex justify-content-between align-items-start mb-2">
+                        <h3 class="flat-title">Quiet Studio in Nakano</h3>
+                        <div class="flat-price">¥70,000/month</div>
+                    </div>
+                    
+                    <div class="flat-location mb-3">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Nakano, Tokyo
+                    </div>
+                    
+                    <div class="flat-specs mb-3">
+                        <span><i class="fas fa-ruler-combined"></i> 28㎡</span>
+                        <span><i class="fas fa-bed"></i> 1 Bedroom</span>
+                        <span><i class="fas fa-wifi"></i> WiFi Included</span>
+                    </div>
+                    
+                    <p class="flat-description">Peaceful studio in residential Nakano, perfect for those seeking a quiet neighborhood.</p>
+                    
+                    <div class="flat-amenities mb-3" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                        <span style="background: var(--accent-light); color: var(--primary-color); padding: 0.25rem 0.5rem; border-radius: var(--border-radius-sm); font-size: 0.75rem; font-weight: 500;">Furnished</span>
+                        <span style="background: var(--accent-light); color: var(--primary-color); padding: 0.25rem 0.5rem; border-radius: var(--border-radius-sm); font-size: 0.75rem; font-weight: 500;">Kitchen</span>
+                        <span style="background: var(--accent-light); color: var(--primary-color); padding: 0.25rem 0.5rem; border-radius: var(--border-radius-sm); font-size: 0.75rem; font-weight: 500;">AC</span>
+                        <span style="background: var(--accent-light); color: var(--primary-color); padding: 0.25rem 0.5rem; border-radius: var(--border-radius-sm); font-size: 0.75rem; font-weight: 500;">Laundry</span>
+                    </div>
+                    
+                    <div class="flat-actions">
+                        <a href="./apply.html?flat=7" class="btn btn-primary">
+                            <i class="fas fa-edit me-1"></i>
+                            Apply Now
+                        </a>
+                        <button class="btn btn-outline-primary flat-details-btn" data-flat-id="7">
+                            <i class="fas fa-info-circle me-1"></i>
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Flat 8 -->
+            <div class="flat-card">
+                <div class="flat-image">
+                    <div class="flat-placeholder">
+                        <i class="fas fa-home"></i>
+                        <p>Compact Apartment in Harajuku</p>
+                    </div>
+                    <div class="flat-badge" style="position: absolute; top: 1rem; right: 1rem; background: var(--primary-color); color: white; padding: 0.25rem 0.75rem; border-radius: var(--border-radius-sm); font-size: 0.875rem; font-weight: 600;">
+                        Available
+                    </div>
+                </div>
+                <div class="flat-content">
+                    <div class="d-flex justify-content-between align-items-start mb-2">
+                        <h3 class="flat-title">Compact Apartment in Harajuku</h3>
+                        <div class="flat-price">¥90,000/month</div>
+                    </div>
+                    
+                    <div class="flat-location mb-3">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Harajuku, Tokyo
+                    </div>
+                    
+                    <div class="flat-specs mb-3">
+                        <span><i class="fas fa-ruler-combined"></i> 35㎡</span>
+                        <span><i class="fas fa-bed"></i> 1 Bedroom</span>
+                        <span><i class="fas fa-wifi"></i> WiFi Included</span>
+                    </div>
+                    
+                    <p class="flat-description">Trendy apartment in fashion-forward Harajuku, walking distance to shopping and cafes.</p>
+                    
+                    <div class="flat-amenities mb-3" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                        <span style="background: var(--accent-light); color: var(--primary-color); padding: 0.25rem 0.5rem; border-radius: var(--border-radius-sm); font-size: 0.75rem; font-weight: 500;">Furnished</span>
+                        <span style="background: var(--accent-light); color: var(--primary-color); padding: 0.25rem 0.5rem; border-radius: var(--border-radius-sm); font-size: 0.75rem; font-weight: 500;">Kitchen</span>
+                        <span style="background: var(--accent-light); color: var(--primary-color); padding: 0.25rem 0.5rem; border-radius: var(--border-radius-sm); font-size: 0.75rem; font-weight: 500;">AC</span>
+                        <span style="background: var(--accent-light); color: var(--primary-color); padding: 0.25rem 0.5rem; border-radius: var(--border-radius-sm); font-size: 0.75rem; font-weight: 500;">Laundry</span>
+                    </div>
+                    
+                    <div class="flat-actions">
+                        <a href="./apply.html?flat=8" class="btn btn-primary">
+                            <i class="fas fa-edit me-1"></i>
+                            Apply Now
+                        </a>
+                        <button class="btn btn-outline-primary flat-details-btn" data-flat-id="8">
+                            <i class="fas fa-info-circle me-1"></i>
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Flat 9 -->
+            <div class="flat-card">
+                <div class="flat-image">
+                    <div class="flat-placeholder">
+                        <i class="fas fa-home"></i>
+                        <p>Traditional House in Yanaka</p>
+                    </div>
+                    <div class="flat-badge" style="position: absolute; top: 1rem; right: 1rem; background: var(--primary-color); color: white; padding: 0.25rem 0.75rem; border-radius: var(--border-radius-sm); font-size: 0.875rem; font-weight: 600;">
+                        Available
+                    </div>
+                </div>
+                <div class="flat-content">
+                    <div class="d-flex justify-content-between align-items-start mb-2">
+                        <h3 class="flat-title">Traditional House in Yanaka</h3>
+                        <div class="flat-price">¥110,000/month</div>
+                    </div>
+                    
+                    <div class="flat-location mb-3">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Yanaka, Tokyo
+                    </div>
+                    
+                    <div class="flat-specs mb-3">
+                        <span><i class="fas fa-ruler-combined"></i> 50㎡</span>
+                        <span><i class="fas fa-bed"></i> 2 Bedrooms</span>
+                        <span><i class="fas fa-wifi"></i> WiFi Included</span>
+                    </div>
+                    
+                    <p class="flat-description">Charming traditional Japanese house in historic Yanaka, offering authentic cultural experience.</p>
+                    
+                    <div class="flat-amenities mb-3" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                        <span style="background: var(--accent-light); color: var(--primary-color); padding: 0.25rem 0.5rem; border-radius: var(--border-radius-sm); font-size: 0.75rem; font-weight: 500;">Furnished</span>
+                        <span style="background: var(--accent-light); color: var(--primary-color); padding: 0.25rem 0.5rem; border-radius: var(--border-radius-sm); font-size: 0.75rem; font-weight: 500;">Kitchen</span>
+                        <span style="background: var(--accent-light); color: var(--primary-color); padding: 0.25rem 0.5rem; border-radius: var(--border-radius-sm); font-size: 0.75rem; font-weight: 500;">AC</span>
+                        <span style="background: var(--accent-light); color: var(--primary-color); padding: 0.25rem 0.5rem; border-radius: var(--border-radius-sm); font-size: 0.75rem; font-weight: 500;">Laundry</span>
+                    </div>
+                    
+                    <div class="flat-actions">
+                        <a href="./apply.html?flat=9" class="btn btn-primary">
+                            <i class="fas fa-edit me-1"></i>
+                            Apply Now
+                        </a>
+                        <button class="btn btn-outline-primary flat-details-btn" data-flat-id="9">
+                            <i class="fas fa-info-circle me-1"></i>
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Flat 10 -->
+            <div class="flat-card">
+                <div class="flat-image">
+                    <div class="flat-placeholder">
+                        <i class="fas fa-home"></i>
+                        <p>Modern Studio in Ebisu</p>
+                    </div>
+                    <div class="flat-badge" style="position: absolute; top: 1rem; right: 1rem; background: var(--primary-color); color: white; padding: 0.25rem 0.75rem; border-radius: var(--border-radius-sm); font-size: 0.875rem; font-weight: 600;">
+                        Available
+                    </div>
+                </div>
+                <div class="flat-content">
+                    <div class="d-flex justify-content-between align-items-start mb-2">
+                        <h3 class="flat-title">Modern Studio in Ebisu</h3>
+                        <div class="flat-price">¥85,000/month</div>
+                    </div>
+                    
+                    <div class="flat-location mb-3">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Ebisu, Tokyo
+                    </div>
+                    
+                    <div class="flat-specs mb-3">
+                        <span><i class="fas fa-ruler-combined"></i> 32㎡</span>
+                        <span><i class="fas fa-bed"></i> 1 Bedroom</span>
+                        <span><i class="fas fa-wifi"></i> WiFi Included</span>
+                    </div>
+                    
+                    <p class="flat-description">Contemporary studio in sophisticated Ebisu with excellent dining and nightlife options.</p>
+                    
+                    <div class="flat-amenities mb-3" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                        <span style="background: var(--accent-light); color: var(--primary-color); padding: 0.25rem 0.5rem; border-radius: var(--border-radius-sm); font-size: 0.75rem; font-weight: 500;">Furnished</span>
+                        <span style="background: var(--accent-light); color: var(--primary-color); padding: 0.25rem 0.5rem; border-radius: var(--border-radius-sm); font-size: 0.75rem; font-weight: 500;">Kitchen</span>
+                        <span style="background: var(--accent-light); color: var(--primary-color); padding: 0.25rem 0.5rem; border-radius: var(--border-radius-sm); font-size: 0.75rem; font-weight: 500;">AC</span>
+                        <span style="background: var(--accent-light); color: var(--primary-color); padding: 0.25rem 0.5rem; border-radius: var(--border-radius-sm); font-size: 0.75rem; font-weight: 500;">Laundry</span>
+                    </div>
+                    
+                    <div class="flat-actions">
+                        <a href="./apply.html?flat=10" class="btn btn-primary">
+                            <i class="fas fa-edit me-1"></i>
+                            Apply Now
+                        </a>
+                        <button class="btn btn-outline-primary flat-details-btn" data-flat-id="10">
+                            <i class="fas fa-info-circle me-1"></i>
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Load More Section -->
+        <div class="text-center mt-5">
+            <button class="btn btn-outline-primary btn-lg">
+                <i class="fas fa-plus me-2"></i>
+                Load More Apartments
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose Us Section -->
+<section style="background: var(--accent-light); padding: 5rem 0;">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2>Why Choose TokyoRent?</h2>
+            <p class="section-subtitle">We make finding your perfect Tokyo home simple and stress-free.</p>
+        </div>
+        
+        <div class="d-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+            <div class="text-center">
+                <div style="width: 80px; height: 80px; background: var(--primary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; box-shadow: var(--shadow-medium);">
+                    <i class="fas fa-clock text-white" style="font-size: 2rem;"></i>
+                </div>
+                <h4>Quick Process</h4>
+                <p class="text-muted">Get approved and move in within 1-2 weeks. No lengthy paperwork or complicated procedures.</p>
+            </div>
+            
+            <div class="text-center">
+                <div style="width: 80px; height: 80px; background: var(--primary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; box-shadow: var(--shadow-medium);">
+                    <i class="fas fa-shield-alt text-white" style="font-size: 2rem;"></i>
+                </div>
+                <h4>Secure & Safe</h4>
+                <p class="text-muted">All our properties are verified and secure. Your safety and comfort are our top priorities.</p>
+            </div>
+            
+            <div class="text-center">
+                <div style="width: 80px; height: 80px; background: var(--primary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; box-shadow: var(--shadow-medium);">
+                    <i class="fas fa-headset text-white" style="font-size: 2rem;"></i>
+                </div>
+                <h4>24/7 Support</h4>
+                <p class="text-muted">Round-the-clock support in English. We're here to help you with any questions or issues.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Flat Details Modal -->
+<div id="flatModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div id="modalContent">
+            <!-- Content will be populated by JavaScript -->
+        </div>
+    </div>
+</div>
+
+    </main>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>TokyoRent</h3>
+                <p>Your trusted partner for affordable and reliable housing in Tokyo.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <p><i class="fas fa-map-marker-alt"></i> 1-1-1 Shibuya, Tokyo, Japan</p>
+                <p><i class="fas fa-phone"></i> +81-3-1234-5678</p>
+                <p><i class="fas fa-envelope"></i> info@tokyorent.com</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./flats.html">Available Flats</a></li>
+                    <li><a href="./apply.html">Apply Now</a></li>
+                    <li><a href="./faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Office Hours</h4>
+                <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                <p>Saturday: 10:00 AM - 4:00 PM</p>
+                <p>Sunday: Closed</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 TokyoRent. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="./js/main.js"></script>
+</body>
+</html>
