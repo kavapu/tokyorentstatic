@@ -142,7 +142,7 @@
                             <i class="fas fa-edit me-1"></i>
                             Apply Now
                         </a>
-                        <button class="btn btn-outline-primary flat-details-btn" data-flat-id="1">
+                        <button class="btn btn-outline-primary flat-details-btn" onclick="openFlatModal(1)">
                             <i class="fas fa-info-circle me-1"></i>
                             View Details
                         </button>
@@ -189,7 +189,7 @@
                             <i class="fas fa-edit me-1"></i>
                             Apply Now
                         </a>
-                        <button class="btn btn-outline-primary flat-details-btn" data-flat-id="2">
+                        <button class="btn btn-outline-primary flat-details-btn" onclick="openFlatModal(2)">
                             <i class="fas fa-info-circle me-1"></i>
                             View Details
                         </button>
@@ -236,7 +236,7 @@
                             <i class="fas fa-edit me-1"></i>
                             Apply Now
                         </a>
-                        <button class="btn btn-outline-primary flat-details-btn" data-flat-id="3">
+                        <button class="btn btn-outline-primary flat-details-btn" onclick="openFlatModal(3)">
                             <i class="fas fa-info-circle me-1"></i>
                             View Details
                         </button>
@@ -283,7 +283,7 @@
                             <i class="fas fa-edit me-1"></i>
                             Apply Now
                         </a>
-                        <button class="btn btn-outline-primary flat-details-btn" data-flat-id="4">
+                        <button class="btn btn-outline-primary flat-details-btn" onclick="openFlatModal(4)">
                             <i class="fas fa-info-circle me-1"></i>
                             View Details
                         </button>
@@ -330,7 +330,7 @@
                             <i class="fas fa-edit me-1"></i>
                             Apply Now
                         </a>
-                        <button class="btn btn-outline-primary flat-details-btn" data-flat-id="5">
+                        <button class="btn btn-outline-primary flat-details-btn" onclick="openFlatModal(5)">
                             <i class="fas fa-info-circle me-1"></i>
                             View Details
                         </button>
@@ -377,7 +377,7 @@
                             <i class="fas fa-edit me-1"></i>
                             Apply Now
                         </a>
-                        <button class="btn btn-outline-primary flat-details-btn" data-flat-id="6">
+                        <button class="btn btn-outline-primary flat-details-btn" onclick="openFlatModal(6)">
                             <i class="fas fa-info-circle me-1"></i>
                             View Details
                         </button>
@@ -424,7 +424,7 @@
                             <i class="fas fa-edit me-1"></i>
                             Apply Now
                         </a>
-                        <button class="btn btn-outline-primary flat-details-btn" data-flat-id="7">
+                        <button class="btn btn-outline-primary flat-details-btn" onclick="openFlatModal(7)">
                             <i class="fas fa-info-circle me-1"></i>
                             View Details
                         </button>
@@ -471,7 +471,7 @@
                             <i class="fas fa-edit me-1"></i>
                             Apply Now
                         </a>
-                        <button class="btn btn-outline-primary flat-details-btn" data-flat-id="8">
+                        <button class="btn btn-outline-primary flat-details-btn" onclick="openFlatModal(8)">
                             <i class="fas fa-info-circle me-1"></i>
                             View Details
                         </button>
@@ -518,7 +518,7 @@
                             <i class="fas fa-edit me-1"></i>
                             Apply Now
                         </a>
-                        <button class="btn btn-outline-primary flat-details-btn" data-flat-id="9">
+                        <button class="btn btn-outline-primary flat-details-btn" onclick="openFlatModal(9)">
                             <i class="fas fa-info-circle me-1"></i>
                             View Details
                         </button>
@@ -565,7 +565,7 @@
                             <i class="fas fa-edit me-1"></i>
                             Apply Now
                         </a>
-                        <button class="btn btn-outline-primary flat-details-btn" data-flat-id="10">
+                        <button class="btn btn-outline-primary flat-details-btn" onclick="openFlatModal(10)">
                             <i class="fas fa-info-circle me-1"></i>
                             View Details
                         </button>
@@ -617,7 +617,7 @@
 <!-- Flat Details Modal -->
 <div id="flatModal" class="modal">
     <div class="modal-content">
-        <span class="close">&times;</span>
+        <span class="close" onclick="closeFlatModal()">&times;</span>
         <div id="modalContent">
             <!-- Content will be populated by JavaScript -->
         </div>
@@ -668,7 +668,301 @@
         </div>
     </footer>
     <script src="./js/main.js"></script>
+    <style>
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(5px);
+        }
+
+        .modal-content {
+            background-color: #2a2a2a;
+            margin: 5% auto;
+            padding: 0;
+            border: 1px solid #404040;
+            border-radius: 12px;
+            width: 90%;
+            max-width: 800px;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .close {
+            color: #ffffff;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            position: absolute;
+            right: 20px;
+            top: 15px;
+            z-index: 1001;
+            cursor: pointer;
+            background: rgba(0, 0, 0, 0.5);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .close:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.1);
+        }
+
+        .modal-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 12px 12px 0 0;
+        }
+
+        .modal-body {
+            padding: 2rem;
+        }
+
+        .modal-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+        }
+
+        .modal-price {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .modal-location {
+            color: #cccccc;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .modal-specs {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .modal-specs span {
+            color: #ffffff;
+            font-weight: 500;
+        }
+
+        .modal-description {
+            color: #cccccc;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+        }
+
+        .modal-amenities {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .modal-amenities span {
+            background: var(--accent-light);
+            color: var(--primary-color);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .modal-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        @media (max-width: 768px) {
+            .modal-content {
+                width: 95%;
+                margin: 10% auto;
+            }
+            
+            .modal-body {
+                padding: 1.5rem;
+            }
+            
+            .modal-specs {
+                gap: 1rem;
+            }
+            
+            .modal-actions {
+                flex-direction: column;
+            }
+        }
+    </style>
+
     <script>
+        // Flat data for modal
+        const flatData = {
+            1: {
+                title: "Cozy Studio in Shibuya",
+                price: "¥80,000/month",
+                location: "Shibuya, Tokyo",
+                specs: "25㎡ • 1 Bedroom • WiFi Included",
+                description: "Modern studio apartment in the heart of Shibuya, perfect for singles or couples. This fully furnished apartment features contemporary design with all essential amenities. Located just minutes from Shibuya Station, you'll have easy access to shopping, dining, and entertainment.",
+                amenities: ["Furnished", "Kitchen", "AC", "Laundry", "WiFi", "Balcony"],
+                image: "./images/Gemini_Generated_Image_2sr2mi2sr2mi2sr2.png"
+            },
+            2: {
+                title: "Traditional Apartment in Asakusa",
+                price: "¥65,000/month",
+                location: "Asakusa, Tokyo",
+                specs: "30㎡ • 1 Bedroom • WiFi Included",
+                description: "Charming traditional apartment near Senso-ji Temple with authentic Japanese atmosphere. This cozy space combines traditional Japanese design with modern comforts, offering a unique living experience in one of Tokyo's most historic neighborhoods.",
+                amenities: ["Furnished", "Kitchen", "AC", "Laundry", "Traditional Design"],
+                image: "./images/Gemini_Generated_Image_ejftknejftknejft.png"
+            },
+            3: {
+                title: "Modern Loft in Roppongi",
+                price: "¥150,000/month",
+                location: "Roppongi, Tokyo",
+                specs: "45㎡ • 1 Bedroom • WiFi Included",
+                description: "Stylish modern loft with high ceilings and contemporary design. Perfect for professionals who appreciate modern aesthetics and want to be in the heart of Tokyo's international district.",
+                amenities: ["Furnished", "Kitchen", "AC", "Laundry", "High Ceilings", "Modern Design"],
+                image: "./images/Gemini_Generated_Image_ii7397ii7397ii73.png"
+            },
+            4: {
+                title: "Family Apartment in Shinjuku",
+                price: "¥180,000/month",
+                location: "Shinjuku, Tokyo",
+                specs: "60㎡ • 2 Bedrooms • WiFi Included",
+                description: "Spacious family apartment in the heart of Shinjuku. Perfect for families or roommates, this apartment offers plenty of space and is located near excellent schools and family-friendly amenities.",
+                amenities: ["Furnished", "Kitchen", "AC", "Laundry", "2 Bedrooms", "Family-Friendly"],
+                image: "./images/Gemini_Generated_Image_k50w86k50w86k50w.png"
+            },
+            5: {
+                title: "Budget Studio in Ikebukuro",
+                price: "¥55,000/month",
+                location: "Ikebukuro, Tokyo",
+                specs: "20㎡ • 1 Bedroom • WiFi Included",
+                description: "Affordable studio apartment perfect for students or budget-conscious individuals. Despite the low price, this apartment includes all essential amenities and is well-connected to public transportation.",
+                amenities: ["Furnished", "Kitchen", "AC", "WiFi", "Budget-Friendly"],
+                image: "./images/Gemini_Generated_Image_kjmbf2kjmbf2kjmb.png"
+            },
+            6: {
+                title: "Luxury Apartment in Ginza",
+                price: "¥250,000/month",
+                location: "Ginza, Tokyo",
+                specs: "70㎡ • 2 Bedrooms • WiFi Included",
+                description: "Luxurious apartment in Tokyo's most prestigious shopping district. This high-end apartment features premium finishes, concierge service, and stunning city views. Perfect for executives or those who appreciate luxury living.",
+                amenities: ["Furnished", "Kitchen", "AC", "Laundry", "Concierge", "City View", "Premium"],
+                image: "./images/Gemini_Generated_Image_nkmb0mnkmb0mnkmb.png"
+            },
+            7: {
+                title: "Quiet Studio in Nakano",
+                price: "¥70,000/month",
+                location: "Nakano, Tokyo",
+                specs: "28㎡ • 1 Bedroom • WiFi Included",
+                description: "Peaceful studio apartment in a quiet residential area. Perfect for those who prefer a calm environment while still being well-connected to the city center.",
+                amenities: ["Furnished", "Kitchen", "AC", "Laundry", "Quiet Area", "Residential"],
+                image: "./images/Gemini_Generated_Image_nmi1qcnmi1qcnmi1.png"
+            },
+            8: {
+                title: "Compact Apartment in Harajuku",
+                price: "¥95,000/month",
+                location: "Harajuku, Tokyo",
+                specs: "35㎡ • 1 Bedroom • WiFi Included",
+                description: "Compact but stylish apartment in the trendy Harajuku district. This apartment is perfect for fashion-conscious individuals who want to be in the center of Tokyo's youth culture.",
+                amenities: ["Furnished", "Kitchen", "AC", "Laundry", "Trendy Area", "Fashion District"],
+                image: "./images/Gemini_Generated_Image_nqxxrqnqxxrqnqxx.png"
+            },
+            9: {
+                title: "Traditional House in Yanaka",
+                price: "¥120,000/month",
+                location: "Yanaka, Tokyo",
+                specs: "50㎡ • 2 Bedrooms • WiFi Included",
+                description: "Beautiful traditional Japanese house in the historic Yanaka district. This unique property offers an authentic Japanese living experience with modern conveniences.",
+                amenities: ["Furnished", "Kitchen", "AC", "Laundry", "Traditional House", "Historic Area"],
+                image: "./images/Gemini_Generated_Image_o4n4dto4n4dto4n4.png"
+            },
+            10: {
+                title: "Modern Studio in Ebisu",
+                price: "¥110,000/month",
+                location: "Ebisu, Tokyo",
+                specs: "40㎡ • 1 Bedroom • WiFi Included",
+                description: "Contemporary studio apartment in the sophisticated Ebisu district. This modern space features clean lines and is perfect for professionals who appreciate good design.",
+                amenities: ["Furnished", "Kitchen", "AC", "Laundry", "Modern Design", "Professional Area"],
+                image: "./images/Gemini_Generated_Image_rhmcierhmcierhmc.png"
+            }
+        };
+
+        // Modal functions
+        function openFlatModal(flatId) {
+            const modal = document.getElementById('flatModal');
+            const modalContent = document.getElementById('modalContent');
+            const flat = flatData[flatId];
+
+            if (flat) {
+                modalContent.innerHTML = `
+                    <img src="${flat.image}" alt="${flat.title}" class="modal-image">
+                    <div class="modal-body">
+                        <h2 class="modal-title">${flat.title}</h2>
+                        <div class="modal-price">${flat.price}</div>
+                        <div class="modal-location">
+                            <i class="fas fa-map-marker-alt"></i> ${flat.location}
+                        </div>
+                        <div class="modal-specs">
+                            <span><i class="fas fa-ruler-combined"></i> ${flat.specs.split(' • ')[0]}</span>
+                            <span><i class="fas fa-bed"></i> ${flat.specs.split(' • ')[1]}</span>
+                            <span><i class="fas fa-wifi"></i> ${flat.specs.split(' • ')[2]}</span>
+                        </div>
+                        <p class="modal-description">${flat.description}</p>
+                        <div class="modal-amenities">
+                            ${flat.amenities.map(amenity => `<span>${amenity}</span>`).join('')}
+                        </div>
+                        <div class="modal-actions">
+                            <a href="./apply.html?flat=${flatId}" class="btn btn-primary">
+                                <i class="fas fa-edit me-1"></i>
+                                Apply Now
+                            </a>
+                            <button class="btn btn-outline-primary" onclick="closeFlatModal()">
+                                <i class="fas fa-times me-1"></i>
+                                Close
+                            </button>
+                        </div>
+                    </div>
+                `;
+                modal.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeFlatModal() {
+            const modal = document.getElementById('flatModal');
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('flatModal');
+            if (event.target === modal) {
+                closeFlatModal();
+            }
+        }
+
         // Filter functionality
         document.addEventListener('DOMContentLoaded', function() {
             // Get all the filter elements
