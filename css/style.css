@@ -413,6 +413,11 @@ p {
     margin-right: auto;
 }
 
+.features {
+    background: transparent;
+    padding: 3rem 0;
+}
+
 .features-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
