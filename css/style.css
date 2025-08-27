@@ -567,8 +567,35 @@ p {
 .faq-hero {
     background: #1a1a1a;
     color: #ffffff;
-    padding: 4rem 0 3rem;
+    padding: 2rem 0 2rem;
     text-align: center;
+}
+
+/* Main Hero Section */
+.hero {
+    background: #1a1a1a;
+    color: #ffffff;
+    padding: 2rem 0 2rem;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 /* Flats Section */
@@ -1603,8 +1630,8 @@ img {
 
 /* Header and Navigation Styles */
 .header {
-    background: #1a1a1a;
-    border-bottom: 1px solid #404040;
+    background: transparent;
+    border-bottom: none;
     position: sticky;
     top: 0;
     z-index: 1000;
