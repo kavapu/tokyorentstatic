@@ -565,7 +565,7 @@ p {
 .flats-hero,
 .apply-hero,
 .faq-hero {
-    background: #1a1a1a;
+    background: transparent;
     color: #ffffff;
     padding: 2rem 0 2rem;
     text-align: center;
@@ -573,7 +573,7 @@ p {
 
 /* Main Hero Section */
 .hero {
-    background: #1a1a1a;
+    background: transparent;
     color: #ffffff;
     padding: 2rem 0 2rem;
     text-align: center;
